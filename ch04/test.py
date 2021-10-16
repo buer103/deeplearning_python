@@ -44,3 +44,17 @@ print(b)
 
 print(np.sum(a**2))
 print(np.sum(b**2,axis=1))
+
+print("***********test meshgrid*************")
+x0 = np.arange(-2,2.5,0.25)
+x1 = np.arange(-2,2.5,0.25)
+X,Y = np.meshgrid(x0,x1)
+
+print(X)
+print("*****************")
+print(Y)
+print("******************")
+X = X.flatten()
+Y = Y.flatten()
+print(np.array([X,Y]))# ndim=2
+
