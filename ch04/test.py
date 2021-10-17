@@ -43,7 +43,8 @@ print(a)
 print(b)
 
 print(np.sum(a**2))
-print(np.sum(b**2,axis=1))
+print(np.sum(b**2))# 默认所有元素平方求和
+print(np.sum(b**2,axis=1))# 每一行的和
 
 print("***********test meshgrid*************")
 x0 = np.arange(-2,2.5,0.25)
@@ -55,6 +56,7 @@ print("*****************")
 print(Y)
 print("******************")
 X = X.flatten()
+print("X flatten:",X.ndim)#1
 Y = Y.flatten()
 print(np.array([X,Y]))# ndim=2
 

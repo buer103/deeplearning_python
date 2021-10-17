@@ -12,6 +12,12 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 def _numerical_gradient_no_batch(f, x):
+    '''
+    一维情况下求梯度
+    :param f:
+    :param x:
+    :return:
+    '''
     h = 1e-4  # 0.0001
     grad = np.zeros_like(x)
 
@@ -30,6 +36,12 @@ def _numerical_gradient_no_batch(f, x):
 
 
 def numerical_gradient(f, X):
+    '''
+    矩阵维度判读  进而转去求梯度
+    :param f:
+    :param X:
+    :return:
+    '''
     if X.ndim == 1:
         return _numerical_gradient_no_batch(f, X)
     else:
@@ -56,6 +68,9 @@ def tangent_line(f, x):
 
 
 if __name__ == '__main__':
+    '''
+    示例   利用  那三维的图像  基本数据生成  相当于每一个面的叠加
+    '''
     x0 = np.arange(-2, 2.5, 0.25)
     x1 = np.arange(-2, 2.5, 0.25)
     X, Y = np.meshgrid(x0, x1)
