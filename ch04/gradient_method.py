@@ -42,9 +42,9 @@ lr = 0.1
 step_num = 20
 x, x_history = gradient_descent(function_2, init_x,lr=lr)
 
-plt.plot( [-5, 5], [0,0], '--b')
+plt.plot( [-5, 5], [0,0], '--b') # 虚线 + 颜色
 plt.plot( [0,0], [-5, 5], '--r')
-plt.plot(x_history[:,0], x_history[:,1], 'o')
+plt.plot(x_history[:,0], x_history[:,1], 'o')# 表示 点
 
 plt.xlim(-3.5, 3.5)
 plt.ylim(-4.5, 4.5)
